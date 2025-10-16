@@ -51,3 +51,48 @@ console.log("List of famous paintings:");
 paintings.forEach(painting => {
     console.log(`- Title: ${painting.title}, Artist: ${painting.artist}, Date: ${painting.date}`);
 });
+
+
+let user = {name: 'Bob',age:30};
+//console.log(user.name)
+
+
+let key='x'
+let point = {
+    x:100,
+    y:200
+}
+
+//console.log(point[key])
+
+for(key in point)
+    console.log(key,point[key])
+//console.log(point[x,y])
+
+let point1 = {
+    x:100,
+    y:200,
+    show:function()
+    {
+        console.log(`${this.x} ${this.y}`)
+    },
+    /*set:positionX(x)
+    {
+        this.x = x
+    }*/
+    set positionX(x) { this.x = x; }
+}
+point1.positionX =0;
+console.log(point1.x)
+
+//point1.show();
+
+let point2 = point1;
+point2.y = 30;
+//console.log(`$(point2.x) $(point1.y)`)
+//console.log(`${point2.x} ${point1.y}`)
+
+
+
+
+
